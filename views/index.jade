@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+#wrapper
+  #main.mainContainer
+    each post, i in allPosts
+      .postContainer.panel.panel-success
+        .profilDiv.col-sm-8.panel-heading #{post.titel}
+        .postDiv.col-sm-8.panel-body #{post.body}
+        .panel-footer.col-sm-8
+          label.userName #{post.userName}
+          label.userEmail #{post.userEmail} 
